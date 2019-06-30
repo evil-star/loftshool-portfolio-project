@@ -91,6 +91,14 @@
           height: 100px;
           box-sizing: content-box;
           cursor: pointer;
+          transition: transform 0.1s ease-in-out;
+          &:hover {
+            transform: scale(1.05);
+            z-index: 10;
+          }
+          &:active {
+            transform: scale(1.03);
+          }
           &:last-child {
             @include desktopHd {
               display: none;
@@ -125,6 +133,14 @@
         cursor: pointer;
         &:hover {
           background: #1a2738;
+        }
+        &:active {
+          background: #0d141d;
+        }
+        &:focus {
+          outline: 1px solid #4f93e6;
+          z-index: 10;
+          position: relative;
         }
       }
       &-arrow {
@@ -196,6 +212,20 @@
         display: block;
         font-weight: 600;
         text-decoration: none;
+        position: relative;
+        &:hover {
+          color: #8aa7ff;
+          & .slider-info__link-icon {
+            fill: #8aa7ff;
+          }
+        }
+        &:active {
+          top: 2px;
+        }
+        &:focus {
+          text-decoration: underline;
+          outline: none;
+        }
         @include desktop {
           text-align: center;
         }

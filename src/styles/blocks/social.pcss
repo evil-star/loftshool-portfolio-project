@@ -3,14 +3,29 @@
   &__link:not(:nth-child(1)) {
     margin-left: 40px;
   }
+  &__link {
+    position: relative;
+    top: 0;
+    &:active {
+      top: 2px;
+    }
+    &:focus {
+      outline: none;
+      .social-links__icon {
+        opacity: 0.85;
+      }
+    }
+    &:hover {
+      .social-links__icon {
+        opacity: 1;
+      }
+    }
+  }
   &__icon {
     width: 25px;
     fill: #fff;
     opacity: 0.5;
     transition: opacity 0.2s;
-    &:hover {
-      opacity: 1;
-    }
   }
   &_dark &__icon {
     fill: #414c63;
