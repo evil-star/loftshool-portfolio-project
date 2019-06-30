@@ -1,0 +1,15 @@
+nav.header
+
+  include ./menu-mobile
+
+  .container.header__container
+    .header__logo
+      include ./logo
+    .header__menu
+      include ./menu
+    .header__social-links
+      include ./social
+      +social()
+
+    a.menu-btn
+      +icon('menu', 'menu-btn__icon')

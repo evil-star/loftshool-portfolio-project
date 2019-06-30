@@ -1,0 +1,12 @@
+- 
+  var navItems = [
+    { label: 'Главная', link: '#main' },
+    { label: 'Обо мне', link: '#about' },
+    { label: 'Навыки', link: '#skills' },
+    { label: 'Работы', link: '#portfolio' },
+    { label: 'Отзывы', link: '#reviews' },
+    { label: 'Связаться', link: '#contact' },
+  ]
+ul.menu-list
+  each item in navItems
+    li.menu-list__item: a.menu-list__item-link(href=item.link)= item.label

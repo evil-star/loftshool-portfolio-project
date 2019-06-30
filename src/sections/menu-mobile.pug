@@ -1,0 +1,24 @@
+- 
+  var navItems = [
+    { label: 'Главная', link: '#main' },
+    { label: 'Обо мне', link: '#about' },
+    { label: 'Навыки', link: '#skills' },
+    { label: 'Работы', link: '#portfolio' },
+    { label: 'Отзывы', link: '#reviews' },
+    { label: 'Связаться', link: '#contact' },
+  ]
+
+include ./social
+
+.menu-mobile
+  a.menu-mobile__close
+    +icon('cross', 'menu-mobile__close-icon')
+  ul.menu-mobile__list
+    each item in navItems
+      li.menu-mobile__item: a.menu-mobile__item-link(href=item.link)= item.label
+  
+  +social('dark')
+  //- .social-links
+  //-   each item in social
+  //-     a(href=item.link target='_blank').social-links__link
+  //-       +icon(item.icon, 'social-links__icon social-links__icon_dark')

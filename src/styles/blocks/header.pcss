@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 0;
+  z-index: 10;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu {
+    @include desktop {
+      display: none;
+    }
+  }
+  &__logo {
+    @include desktop {
+      flex-grow: 1;
+    }
+  }
+  &__social-links {
+    @include desktop {
+      margin: 0 93px;
+    }
+    @include tablets {
+      display: none;
+    }
+  }
+}
+.menu-btn {
+  display: none;
+  &__icon {
+    width: 24px;
+    fill: #fff;
+  }
+  @include desktop {
+    display: block;
+  }
+}

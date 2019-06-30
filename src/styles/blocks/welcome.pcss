@@ -1,0 +1,62 @@
+.welcome {
+  position: relative;
+  background: url("~images/content/header/bg.jpg") no-repeat center bottom;
+  background-size: cover;
+  padding-bottom: 170px;
+  &__text {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 395px;
+    &-wrap {
+      display: flex;
+      margin-left: -380px;
+      @include desktopHd {
+        margin-left: 0;
+      }
+      @include desktop {
+        flex-direction: column;
+      }
+    }
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 330px;
+    font-size: 72px;
+    line-height: 60px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  &__subtitle {
+    text-align: right;
+    vertical-align: top;
+    margin-right: 61px;
+    opacity: 0.4;
+    line-height: 30px;
+    font-weight: 500;
+    @include desktop {
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-right: 21px;
+  }
+  &__icon {
+    width: 20px;
+    fill: #fff;
+  }
+  @include desktop {
+    display: none;
+  }
+}

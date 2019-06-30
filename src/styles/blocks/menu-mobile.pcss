@@ -1,0 +1,47 @@
+.menu-mobile {
+  background: #ffffff;
+  max-width: 326px;
+  width: 100%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  padding-top: 230px;
+  padding-left: 67px;
+  height: 100vh;
+  z-index: 10;
+  transition: right 0.5s ease-in-out;
+  overflow: scroll;
+  &_active {
+    right: 0;
+  }
+  @include tablets {
+    max-width: 100%;
+  }
+  &__close {
+    position: absolute;
+    right: 45px;
+    top: 70px;
+    font-size: 20px;
+    &-icon {
+      fill: #414c63;
+      width: 20px;
+    }
+  }
+  &__list {
+    margin-bottom: 50px;
+  }
+  &__item {
+    &-link {
+      color: #414c63;
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 10px 10px 10px 0;
+      display: block;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

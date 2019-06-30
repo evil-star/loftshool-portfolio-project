@@ -1,0 +1,243 @@
+.reviews {
+  background: url("~images/content/reviews/bg.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 165px;
+  @include tablets {
+    padding-top: 95px;
+  }
+  @include desktop {
+    padding-bottom: 114px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 95px;
+    flex-wrap: wrap;
+    @include desktop {
+      margin-bottom: 65px;
+    }
+    @include tablets {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    margin-right: 97px;
+    @include tablets {
+      margin-bottom: 24px;
+      text-align: center;
+      width: 100%;
+      margin-right: 0;
+      font-size: 28px;
+    }
+  }
+  &__slider {
+    margin-bottom: 195px;
+    @include desktop {
+      margin-bottom: 118px;
+    }
+    &-controls {
+      display: flex;
+      @include tablets {
+        width: 100%;
+        justify-content: center;
+      }
+      &-item {
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+      &-prev {
+        margin-right: 30px;
+      }
+      &-icon {
+        width: 8px;
+        fill: #fff;
+        &-prev {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    max-width: 931px;
+  }
+  &__text {
+    color: #ffffff;
+    opacity: 0.5;
+    margin-bottom: 29px;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 105px;
+    max-width: 323px;
+    @include desktop {
+      margin-left: 40px;
+    }
+    @include tablets {
+      max-width: none;
+      margin-left: 5px;
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 75px;
+      height: 63px;
+      top: 0;
+      left: -105px;
+      background: svg-load("quote.svg", fill=#fff, width=100%, height=100%)
+        no-repeat;
+      opacity: 0.05;
+      @include desktop {
+        width: 35px;
+        height: 30px;
+        left: -40px;
+        top: 5px;
+      }
+    }
+  }
+  &__about {
+    margin-left: 31px;
+    @include tablets {
+      margin-left: 10px;
+    }
+  }
+  &__photo {
+    @include tablets {
+      max-width: 51px;
+    }
+  }
+  &__name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  &__who {
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0.3;
+  }
+  &__feedback {
+    max-width: 867px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-title {
+      margin-bottom: 95px;
+      @include desktop {
+        margin-bottom: 55px;
+        text-align: center;
+      }
+      @include tablets {
+        text-align: left;
+        font-size: 30px;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 38px;
+      &:hover {
+        .reviews__feedback-label,
+        .reviews__feedback-icon {
+          opacity: 0.7;
+        }
+      }
+      &_half {
+        width: 47%;
+        @include tablets {
+          width: 100%;
+        }
+      }
+    }
+    &-icon {
+      width: 30px;
+      fill: #fff;
+      opacity: 0.3;
+      margin-right: 15px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: opacity 0.2s;
+    }
+    &-label {
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.3;
+      color: #ffffff;
+      margin-left: 45px;
+      width: 100%;
+      margin-bottom: 22px;
+      transition: opacity 0.1s;
+    }
+    &-field {
+      background: transparent;
+      border: none;
+      display: inline-block;
+      vertical-align: middle;
+      resize: none;
+      color: #ffffff;
+      font-weight: 700;
+      flex-grow: 1;
+      &-textarea {
+        line-height: 36px;
+        margin-top: -6px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &-submit {
+      padding: 30px 10px;
+      max-width: 347px;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      background-color: #f29400;
+      background-image: linear-gradient(to right, #ea7400 0%, #f29400 100%);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      position: relative;
+      top: 0;
+      transition: background 0.2s, top 0.2s;
+      margin-top: 22px;
+      @include desktop {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+      }
+      &:hover {
+        background-image: linear-gradient(to right, #f07c08 0%, #ff9d00 100%);
+      }
+      &:active {
+        top: -3px;
+      }
+    }
+  }
+}

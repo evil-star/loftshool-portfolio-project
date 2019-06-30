@@ -1,0 +1,44 @@
+.reviews#reviews
+  .container
+    .reviews__header
+      h2.title.reviews__title Что обо мне говорят
+      .reviews__slider-controls
+        .reviews__slider-controls-item.reviews__slider-controls-prev: +icon('arrow-down', 'reviews__slider-controls-icon reviews__slider-controls-icon-prev')
+        .reviews__slider-controls-item.reviews__slider-controls-next: +icon('arrow-down', 'reviews__slider-controls-icon reviews__slider-controls-icon-next')
+    .reviews__slider
+      .reviews__item
+        .reviews__text.text
+          | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+        .reviews__footer
+          +image('content/reviews/r1.png', 'reviews__photo')
+          .reviews__about
+            .reviews__name Ковальчук Дмитрий
+            .reviews__who Основатель Loftschool
+      .reviews__item
+        .reviews__text.text
+          | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+        .reviews__footer
+          +image('content/reviews/r2.png', 'reviews__photo')
+          .reviews__about
+            .reviews__name Владимир Сабанцев
+            .reviews__who Преподаватель
+    h2.title.reviews__feedback-title Связаться со мной
+    form.reviews__feedback
+      label.reviews__feedback-item.reviews__feedback-item_half
+        .reviews__feedback-label Введите ваше имя
+        .reviews__feedback-icon-wrap: +icon('user', 'reviews__feedback-icon')
+        input.reviews__feedback-field(type="text" name="name")
+      label.reviews__feedback-item.reviews__feedback-item_half
+        .reviews__feedback-label Введите ваш email
+        .reviews__feedback-icon-wrap: +icon('envelope', 'reviews__feedback-icon')
+        input.reviews__feedback-field(type="email" name="email")
+      label.reviews__feedback-item
+        .reviews__feedback-label Сообщение к письму
+        .reviews__feedback-icon-wrap: +icon('message', 'reviews__feedback-icon')
+        textarea.reviews__feedback-field.reviews__feedback-field-textarea(type="email" name="email" rows="2") Требуется ваша помощь в создании сайта.&#13;&#10;Интересуют сроки и цена вопроса
+      button(type="submit").reviews__feedback-submit Отправить
+        
+
+
+
+      

@@ -9,10 +9,12 @@ html {
 body,
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  position: relative;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +32,6 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
 
   @include phones {
     width: 85%;
@@ -40,6 +41,29 @@ body {
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  &_dark {
+    color: #2b3948;
+  }
+  &_small {
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+.text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 0.7;
+  color: #2b3948;
 }
 
 button {
@@ -70,6 +94,10 @@ h6 {
 p {
   margin: 0;
   padding: 0;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 500;
 }
 
 button[type="button"] {
@@ -78,7 +106,7 @@ button[type="button"] {
 }
 
 a {
-  color: inherit;
+  color: $links-color;
   cursor: pointer;
 }
 
@@ -86,4 +114,26 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+blockquote {
+  font-size: 16px;
+  line-height: 30px;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  opacity: 0.5;
+  color: #ffffff;
+  &:before {
+    content: "*";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -53px;
+    width: 22px;
+    height: 22px;
+    font-size: 48px;
+    color: #ff0000;
+    opacity: 0.1;
+  }
 }

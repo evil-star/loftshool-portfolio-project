@@ -1,0 +1,40 @@
+-
+  var frontEndSkills = [
+    { label: "HTML5", percent: "80" },
+    { label: "CSS3", percent: "65" },
+    { label: "JavaScript", percent: "60" },
+    { label: "Jquery и Vue.js", percent: "25" },
+  ]
+-
+  var workflowSkills = [
+    { label: "GIT", percent: "40" },
+    { label: "Terminal", percent: "25" },
+    { label: "Gulp", percent: "50" },
+    { label: "Webpack", percent: "30" },
+  ]
+
+section.skills#skills
+  +image('content/skills/hands.png', 'skills__hands')
+  .container
+    .skills__container
+      .skills__text-block
+        h2.skills__title.title.title_small Чем я могу быть полезен вам
+        p.skills__main-text
+          | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .skills__list
+        .skills__list-title Front-end
+        .skills__circles
+          each item in frontEndSkills
+            .progress-circle-wrap
+              p.progress-circle__text= item.label
+              svg.progress-circle.skills__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+                circle.progress-circle__item.progress-circle__item_under(cx="50" cy="50" r="40")
+                circle.progress-circle__item.progress-circle__item_above(cx="50" cy="50" r="40" style=`stroke-dashoffset: ${(251/100) * (100 - item.percent)};`)
+        .skills__list-title Workflow
+        .skills__circles.skills__circles_last
+          each item in workflowSkills
+            .progress-circle-wrap
+              p.progress-circle__text= item.label
+              svg.progress-circle.skills__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+                circle.progress-circle__item.progress-circle__item_under(cx="50" cy="50" r="40")
+                circle.progress-circle__item.progress-circle__item_above(cx="50" cy="50" r="40" style=`stroke-dashoffset: ${(251/100) * (100 - item.percent)};`)

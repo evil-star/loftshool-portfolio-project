@@ -1,0 +1,100 @@
+.footer {
+  background: #1b1f22;
+  padding: 84px 0;
+  @include tablets {
+    padding: 65px 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__year {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 42px;
+    color: #ffffff;
+    opacity: 0.1;
+    @include desktop {
+      margin-bottom: 28px;
+    }
+  }
+  &__about {
+    width: 24.32%;
+    display: flex;
+    justify-content: space-between;
+    @include desktop {
+      justify-content: flex-start;
+    }
+    @include desktopHd {
+      flex-direction: column;
+    }
+    @include tablets {
+      width: 100%;
+      margin-bottom: 45px;
+    }
+    &-block {
+      flex-direction: column;
+      max-width: 141px;
+      @include tablets {
+        max-width: none;
+      }
+    }
+    &-name {
+      font-size: #ffffff;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 30px;
+      @include tablets {
+        margin-bottom: 2px;
+      }
+    }
+    &-text {
+      color: #ffffff;
+      opacity: 0.15;
+      line-height: 30px;
+    }
+  }
+  &__menu {
+    margin-bottom: 65px;
+    @include tablets {
+      margin-bottom: 48px;
+    }
+  }
+  &__block {
+    width: 62.63%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include desktopHd {
+      width: 73%;
+    }
+    @include tablets {
+      width: 100%;
+    }
+    &-column {
+      max-width: 423px;
+      width: 50%;
+      @include desktop {
+        max-width: none;
+        width: 100%;
+        margin-bottom: 58px;
+      }
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    opacity: 0.3;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+  &__author {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    font-style: italic;
+  }
+}

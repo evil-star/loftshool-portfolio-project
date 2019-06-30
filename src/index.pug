@@ -8,8 +8,11 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
   body
-    .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+
+    include ./sections/header
+    include ./sections/welcome
+    include ./sections/about
+    include ./sections/skills
+    include ./sections/works
+    include ./sections/reviews
+    include ./sections/footer
