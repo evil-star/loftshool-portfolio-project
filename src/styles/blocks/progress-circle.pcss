@@ -1,0 +1,99 @@
+.skills {
+  background: url("~images/content/skills/bg.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 130px;
+  position: relative;
+  padding-bottom: 100px;
+  @include desktop {
+    padding-bottom: 432px;
+  }
+  @include tablets {
+    padding-bottom: 270px;
+  }
+  &__hands {
+    position: absolute;
+    left: -125px;
+    bottom: -87px;
+    transform-origin: bottom right;
+    @include desktop {
+      transform: rotate(-90deg) translateX(100%) translateY(-20%);
+      max-width: 436px;
+      bottom: 0;
+      left: 50%;
+    }
+    @include tablets {
+      max-width: 280px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    @include desktop {
+      align-items: center;
+      text-align: center;
+    }
+    @include tablets {
+      text-align: left;
+    }
+  }
+  &__text-block {
+    max-width: 875px;
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 50px;
+    @include desktop {
+      margin-bottom: 25px;
+    }
+  }
+  &__main-text {
+    font-weight: 600;
+    opacity: 0.5;
+    margin-bottom: 90px;
+    max-width: 585px;
+    @include desktop {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include tablets {
+      margin-left: 0;
+    }
+  }
+  &__list {
+    max-width: 750px;
+    width: 100%;
+    &-title {
+      font-size: 24px;
+      position: relative;
+      font-weight: 700;
+      color: $text-color;
+      margin-bottom: 40px;
+      @include desktop {
+        margin-bottom: 30px;
+      }
+      @include tablets {
+        text-align: center;
+      }
+    }
+  }
+  &__circle-list {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &-wrap {
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+  &__circle {
+    width: 112px;
+  }
+}

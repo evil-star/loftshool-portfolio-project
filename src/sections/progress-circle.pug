@@ -1,0 +1,10 @@
+mixin progress-circle(title, circles)
+  .skills__list-title= title
+  .skills__circle-list
+    each item in circles
+      - var dashoffset = ((251/100) * (100 - item.percent))
+      .progress-circle-wrap
+        p.progress-circle__text= item.label
+        svg.progress-circle.skills__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+          circle.progress-circle__item.progress-circle__item_under(cx="50" cy="50" r="40")
+          circle.progress-circle__item.progress-circle__item_above(cx="50" cy="50" r="40" style="stroke-dashoffset: " + dashoffset)

@@ -1,0 +1,14 @@
+-
+  var about = [
+    { label: "Проживаю", value: "Казань" },
+    { label: "Возраст", value: "20 лет" },
+    { label: "Родился", value: "20 января 1999" },
+  ]
+
+.data-block
+  +image('content/about/photo.jpg', 'data-block__img')
+  table.data-block__data
+    each item in about
+      tr.data-block__row
+        td.data-block__item.text= item.label
+        td.data-block__item.data-block__item_light= item.value
