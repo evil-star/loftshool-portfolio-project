@@ -5,10 +5,10 @@ section.works#works
       .works__slider
         +image('content/works/1.jpg', 'slider__slide-current')
         .slider__slide-list
-          +image('content/works/1.jpg', 'slider__slide-list-item slider__slide-list-item_active')
-          +image('content/works/2.jpg', 'slider__slide-list-item')
-          +image('content/works/3.jpg', 'slider__slide-list-item')
-          +image('content/works/4.jpg', 'slider__slide-list-item')
+          button.slider__slide-list-item.slider__slide-list-item_active: +image('content/works/1.jpg')
+          button.slider__slide-list-item: +image('content/works/2.jpg')
+          button.slider__slide-list-item: +image('content/works/3.jpg')
+          button.slider__slide-list-item: +image('content/works/4.jpg')
         .slider__controls
           button.slider__controls-item.slider__controls-next 
             +icon('arrow-down', 'slider__controls-arrow')
@@ -20,7 +20,7 @@ section.works#works
           .slider-info__tag: span CSS
           .slider-info__tag: span Javascript
         .slider-info__title.title.title_small.title_dark Сайт школы образования
-        .slider-info__text.text
+        .slider-info__text.text.text_dark
           | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
         a.slider-info__link(href="#")
           +icon('link', 'slider-info__link-icon')

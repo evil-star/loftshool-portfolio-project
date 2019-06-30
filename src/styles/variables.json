@@ -1,6 +1,13 @@
 {
-  "text-color": "#414c63",
+  "text-color": "#fff",
+  "text-dark-color": "#2b3948",
   "links-color": "#4b6fd7",
+  "accent-color": "#ff9a00",
+  "accent-gradient": "linear-gradient(to right, #ea7400 0%, #f29400 100%)",
+  "accent-gradient-hover": "linear-gradient(to right, #ff7f00 0%, #ff9d00 100%)",
+  "icons-color": "#fff",
+  "icons-dark-color": "#414c63",
+
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

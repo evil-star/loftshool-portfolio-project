@@ -8,12 +8,11 @@
         padding-right: 60px;
       }
       &-link {
-        color: #ffffff;
+        color: $text-color;
         font-size: 16px;
         text-decoration: none;
         padding: 10px 0;
         position: relative;
-        top: 0;
         &:before {
           content: "";
           position: absolute;
@@ -21,20 +20,22 @@
           left: 0;
           display: block;
           height: 1px;
-          background: #ffffff;
+          background: $accent-color;
           width: 0;
           transition: width 0.2s;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $accent-color;
         }
         &:hover:before,
         &:focus:before {
           width: 100%;
-          outline: none;
+          text-decoration: none;
         }
         &:focus {
           outline: none;
-        }
-        &:active {
-          top: 2px;
         }
       }
     }

@@ -9,6 +9,7 @@
     padding-top: 100px;
   }
   &__title {
+    color: $text-dark-color;
     margin-bottom: 92px;
     @include desktop {
       margin-bottom: 50px;
@@ -91,22 +92,35 @@
           height: 100px;
           box-sizing: content-box;
           cursor: pointer;
-          transition: transform 0.1s ease-in-out;
-          &:hover {
-            transform: scale(1.05);
-            z-index: 10;
+          position: relative;
+          padding: 0;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $accent-color;
+            opacity: 0;
+            transition: opacity 0.1s;
           }
-          &:active {
-            transform: scale(1.03);
+          &:hover {
+            &:before {
+              opacity: 0.3;
+            }
           }
           &:last-child {
             @include desktopHd {
               display: none;
             }
           }
-          &_active {
+          &_active,
+          &:focus {
             margin-top: -4px;
-            border: 4px solid #f29400;
+            border: 4px solid $accent-color;
+            outline: none;
           }
         }
       }
@@ -131,16 +145,10 @@
         justify-content: center;
         transition: background 0.1s;
         cursor: pointer;
-        &:hover {
-          background: #1a2738;
-        }
-        &:active {
-          background: #0d141d;
-        }
+        &:hover,
         &:focus {
-          outline: 1px solid #4f93e6;
-          z-index: 10;
-          position: relative;
+          background: $accent-color;
+          outline: none;
         }
       }
       &-arrow {
@@ -165,6 +173,7 @@
         padding: 15px 20px;
         margin-right: 15px;
         margin-bottom: 10px;
+        color: #283340;
         &-list {
           display: flex;
           flex-wrap: wrap;
@@ -180,6 +189,7 @@
         }
       }
       &__title {
+        color: $text-dark-color;
         margin-bottom: 40px;
         @include desktop {
           text-align: center;
@@ -211,21 +221,7 @@
       &__link {
         display: block;
         font-weight: 600;
-        text-decoration: none;
         position: relative;
-        &:hover {
-          color: #8aa7ff;
-          & .slider-info__link-icon {
-            fill: #8aa7ff;
-          }
-        }
-        &:active {
-          top: 2px;
-        }
-        &:focus {
-          text-decoration: underline;
-          outline: none;
-        }
         @include desktop {
           text-align: center;
         }

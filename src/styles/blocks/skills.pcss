@@ -46,6 +46,7 @@
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 50px;
+    color: $text-color;
     @include desktop {
       margin-bottom: 25px;
     }
@@ -72,7 +73,7 @@
       font-size: 24px;
       position: relative;
       font-weight: 700;
-      color: #ffffff;
+      color: $text-color;
       margin-bottom: 40px;
       @include desktop {
         margin-bottom: 30px;
@@ -115,9 +116,12 @@
   }
   &__item {
     stroke-width: 2px;
-    stroke: #3f3e42;
+    &_under {
+      stroke: $text-color;
+      opacity: 0.1;
+    }
     &_above {
-      stroke: #f08d00;
+      stroke: $accent-color;
       stroke-dasharray: 251px;
       stroke-dashoffset: 251px;
       stroke-width: 9px;

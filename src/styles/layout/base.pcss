@@ -59,11 +59,13 @@ body {
 }
 
 .text {
-  font-weight: 600;
   font-size: 16px;
   line-height: 30px;
   opacity: 0.7;
-  color: #2b3948;
+  color: $text-color;
+  &_dark {
+    color: $text-dark-color;
+  }
 }
 
 button {
@@ -94,7 +96,7 @@ h6 {
 p {
   margin: 0;
   padding: 0;
-  color: #ffffff;
+  color: $text-color;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 500;
@@ -108,6 +110,11 @@ button[type="button"] {
 a {
   color: $links-color;
   cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 img {

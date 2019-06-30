@@ -3,12 +3,21 @@
   background: url("~images/content/header/bg.jpg") no-repeat center bottom;
   background-size: cover;
   padding-bottom: 170px;
+  height: 1445px;
+  @include desktop {
+    height: 100vh;
+    min-height: 650px;
+    max-height: 1500px;
+  }
   &__text {
     position: relative;
     text-align: center;
     display: flex;
     justify-content: center;
     padding-top: 395px;
+    @include tablets {
+      padding-top: 221px;
+    }
     &-wrap {
       display: flex;
       margin-left: -380px;
@@ -26,7 +35,10 @@
     font-size: 72px;
     line-height: 60px;
     font-weight: 800;
-    color: #ffffff;
+    color: $text-color;
+    @include tablets {
+      margin-bottom: 0;
+    }
   }
   &__subtitle {
     text-align: right;
@@ -49,12 +61,12 @@
   &__text {
     font-size: 18px;
     font-weight: 600;
-    color: #ffffff;
+    color: $text-color;
     margin-right: 21px;
   }
   &__icon {
     width: 20px;
-    fill: #fff;
+    fill: $icons-color;
   }
   @include desktop {
     display: none;
