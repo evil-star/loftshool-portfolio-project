@@ -1,29 +1,21 @@
 .welcome {
   position: relative;
-  background: url("~images/content/header/bg.jpg") no-repeat center center;
+  // background: url("~images/content/header/bg.jpg") no-repeat center center;
   background-size: cover;
   padding-bottom: 170px;
   height: 1445px;
+  min-height: 850px;
+  max-height: 1500px;
   @include desktop {
     height: 100vh;
-    min-height: 650px;
-    max-height: 1500px;
   }
   &__text {
     position: relative;
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-top: 395px;
-    @include tablets {
-      padding-top: 221px;
-    }
     &-wrap {
       display: flex;
-      margin-left: -380px;
-      @include desktopHd {
-        margin-left: 0;
-      }
       @include desktop {
         flex-direction: column;
       }
@@ -57,6 +49,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  position: absolute;
+  bottom: 480px;
+  left: 50%;
   &__text {
     font-size: 18px;
     font-weight: 600;
@@ -69,5 +64,44 @@
   }
   @include desktop {
     display: none;
+  }
+}
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    &:nth-child(1) {
+      z-index: -5;
+      margin-top: -11.6%;
+      top: 50%;
+      @include desktopHd {
+        top: 650px;
+      }
+      @include desktop {
+        margin-top: 0;
+        top: 27%;
+      }
+      @include tablets {
+        top: 29%;
+      }
+    }
+  }
+  &__image {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

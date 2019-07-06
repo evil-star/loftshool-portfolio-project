@@ -1,15 +1,21 @@
 header.welcome
   .container
-    .welcome__text
-      .welcome__text-wrap
-        p.welcome__subtitle.text
-          | Личный сайт
-          br
-          | веб разработчика
-        h1.welcome__title
-          | Бакин
-          br 
-          | Игорь
     .scroll-down
       .scroll-down__text Скролл
       .scroll-down__icon-wrap: +icon('scroll', 'scroll-down__icon')
+    .parallax
+      .parallax__layer
+        .welcome__text
+          .welcome__text-wrap
+            p.welcome__subtitle.text
+              | Личный сайт
+              br
+              | веб разработчика
+            h1.welcome__title
+              | Бакин
+              br 
+              | Игорь
+      .parallax__layer: +image('content/header/parallax-bg.png', 'parallax__image')
+      .parallax__layer: +image('content/header/parallax-train.png', 'parallax__image')
+      .parallax__layer: +image('content/header/parallax-ground.png', 'parallax__image')
+      .parallax__layer: +image('content/header/parallax-gradient.png', 'parallax__image')
