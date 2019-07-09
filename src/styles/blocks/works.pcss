@@ -150,13 +150,15 @@
           background: $accent-color;
           outline: none;
         }
+        &_disabled {
+          .slider__controls-arrow {
+            opacity: 0.3;
+          }
+        }
       }
       &-arrow {
         fill: #ffffff;
         width: 8px;
-        &_disabled {
-          opacity: 0.3;
-        }
       }
       &-prev {
         transform: rotate(180deg);

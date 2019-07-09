@@ -1,18 +1,3 @@
--
-  var frontEndSkills = [
-    { label: "HTML5", percent: "80" },
-    { label: "CSS3", percent: "65" },
-    { label: "JavaScript", percent: "60" },
-    { label: "Jquery и Vue.js", percent: "25" },
-  ]
--
-  var workflowSkills = [
-    { label: "GIT", percent: "40" },
-    { label: "Terminal", percent: "25" },
-    { label: "Gulp", percent: "50" },
-    { label: "Webpack", percent: "30" },
-  ]
-
 section.skills#skills
   +image('content/skills/hands.png', 'skills__hands')
   .container
@@ -21,10 +6,23 @@ section.skills#skills
         h2.skills__title.title.title_small Чем я могу быть полезен вам
         p.skills__main-text.text
           | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-      .skills__list
+      #skills-container
+
       
-        include ./progress-circle
 
-        +progress-circle("Front-End", [{ label: "HTML5", percent: "80" },{ label: "CSS3", percent: "65" },{ label: "JavaScript", percent: "60" },{ label: "Jquery и Vue.js", percent: "25" }])
+script(type="text/x-template")#skills-component
+  .skills__list
+    skillsRow(v-for="(skill, index) in skills" :key="index" :skill="skill")
 
-        +progress-circle("Workflow", [{ label: "GIT", percent: "40" },{ label: "Terminal", percent: "25" },{ label: "Gulp", percent: "50" }, { label: "Webpack", percent: "30" }])
+script(type="text/x-template")#skills-row
+  .skills__row
+    .skills__list-title {{skill.skillsGroup}}
+    .skills__circle-list
+      skill(v-for="(skillPercent, skillName, index) in skill.skills" :key="index" :skillName="skillName" :skillPercent="skillPercent")
+
+script(type="text/x-template")#skill
+  .progress-circle-wrap
+    p.progress-circle__text {{skillName}}
+    svg.progress-circle.skills__circle(viewBox="0 0 100 100" preserveAspectRatio="none")
+      circle.progress-circle__item.progress-circle__item_under(cx="50" cy="50" r="40")
+      circle.progress-circle__item.progress-circle__item_above(cx="50" cy="50" r="40" ref="circleFill")

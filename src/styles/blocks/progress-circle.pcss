@@ -43,22 +43,22 @@
     width: 100%;
   }
   &__title {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     @include desktop {
-      margin-bottom: 25px;
+      padding-bottom: 25px;
     }
   }
   &__main-text {
     font-weight: 600;
     opacity: 0.5;
-    margin-bottom: 90px;
+    padding-bottom: 90px;
     max-width: 585px;
     @include desktop {
       margin-left: auto;
       margin-right: auto;
     }
     @include tablets {
-      margin-left: 0;
+      padding-left: 0;
     }
   }
   &__list {
@@ -69,9 +69,9 @@
       position: relative;
       font-weight: 700;
       color: $text-color;
-      margin-bottom: 40px;
+      padding-bottom: 40px;
       @include desktop {
-        margin-bottom: 30px;
+        padding-bottom: 30px;
       }
       @include tablets {
         text-align: center;
@@ -79,9 +79,8 @@
     }
   }
   &__circle-list {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     display: flex;
-    justify-content: space-between;
     @include tablets {
       flex-wrap: wrap;
       justify-content: space-around;

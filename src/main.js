@@ -6,9 +6,13 @@ if (process.env.NODE_ENV === "development") {
 let parallaxScene = document.querySelector(".parallax");
 let parallaxLayers = parallaxScene.querySelectorAll(".parallax__layer");
 let scrollTop;
+let speed;
 window.onscroll = function() {
   scrollTop = window.scrollY;
-  console.log(scrollTop);
+  parallaxLayers.forEach(el => {
+    speed = scrollTop * el.dataset.speed;
+    el.style.transform = `translateY(${speed}px) translateZ(0)`;
+  });
 };
 
 const menuToggleEl = document.querySelectorAll(
@@ -23,3 +27,5 @@ menuToggleEl.forEach(function(el) {
 });
 
 import "./scripts/skills";
+import "./scripts/works";
+import "./scripts/reviews";
