@@ -1,32 +1,28 @@
 import Vue from "vue";
-import Flickity from "vue-flickity";
+import VueAwesomeSwiper from "vue-awesome-swiper";
+
+import "swiper/dist/css/swiper.css";
+
+Vue.use(VueAwesomeSwiper);
 
 new Vue({
   el: "#reviews-slider-container",
   template: "#reviews-slider",
-
-  components: {
-    Flickity
-  },
-
+  name: "carrousel",
   data() {
     return {
-      flickityOptions: {
-        prevNextButtons: false,
-        pageDots: false,
-        cellAlign: "left",
-        imagesLoaded: true
+      swiperOption: {
+        slidesPerView: 2,
+        navigation: {
+          nextEl: ".reviews__slider-controls-next",
+          prevEl: ".reviews__slider-controls-prev"
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1
+          }
+        }
       }
     };
-  },
-
-  methods: {
-    next() {
-      this.$refs.flickity.next();
-    },
-
-    previous() {
-      this.$refs.flickity.previous();
-    }
   }
 });
