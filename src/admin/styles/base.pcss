@@ -1,0 +1,145 @@
+html {
+  @include desktop {
+    font-size: 15px;
+  }
+  @include tablets {
+    font-size: 14px;
+  }
+}
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1480px;
+  width: 95%;
+
+  @include phones {
+    width: 85%;
+  }
+}
+
+.fullscreen-section {
+  height: 100vh;
+  min-height: 650px;
+}
+
+.title {
+  color: $text-color;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  &_dark {
+    color: $text-dark-color;
+  }
+  &_small {
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 0.7;
+  color: $text-color;
+  &_dark {
+    color: $text-dark-color;
+  }
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  color: $links-color;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+blockquote {
+  font-size: 16px;
+  line-height: 30px;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  opacity: 0.5;
+  color: #ffffff;
+  &:before {
+    content: "*";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -53px;
+    width: 22px;
+    height: 22px;
+    font-size: 48px;
+    color: #ff0000;
+    opacity: 0.1;
+  }
+}
